@@ -9,17 +9,18 @@ int is_identity(int array[10][10]){
         if (array[i][i]==1){
             for (int j=0;j<10;j++){
                 if (array[i][j]==1 || array[i][j]==0){
-                    checked=1;;
+                    checked=checked+1;
                 }
             }
-            if (checked==1){
-            for (int k=0;k<10;k++){
-                sum=sum+array[i][k];
-                if (sum==1){
+            if (checked==10){
+                for (int k=0;k<10;k++){
+                    sum=sum+array[i][k];
+                    if (sum==1){
                     check=check+1;
-                }
+                    }
                 sum=0;
-            }}
+            }
+            }
         }
 
         }
